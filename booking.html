@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== HEAD: page settings and stylesheet ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your nail appointment at Esther's Nail Studio in Singapore.">
+  <title>Book an Appointment | Esther's Nail Studio</title>
+
+  <!-- Roboto font (Helvetica and sans-serif are used as backups) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER: logo and main navigation ===== -->
+  <header class="logo-header">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a class="logo" href="index.html">
+        <img src="img/Esther’s Nail Studio Logo.png" alt="Esther's Nail Studio Logo">
+      </a>
+      <!-- Navigation bar -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-spa"></i>Services</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-images"></i>Gallery</a></li>
+          <li><a href="booking.html" class="active" aria-current="page"><i class="fa-solid fa-calendar-check"></i>Booking</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- Hero section -->
+    <section class="hero hero-small">
+      <img src="img/appoinment.png" alt="Book an Appointment banner image" width="1600" height="800">
+      <div class="hero-overlay">
+        <h1>Book an Appointment</h1>
+        <p class="hero-tagline">Choose your preferred date and time</p>
+      </div>
+    </section>
+
+    <!-- Booking form section -->
+    <section class="section">
+      <div class="container">
+        <form class="form-box" action="#" method="post">
+
+          <!-- Full name -->
+          <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email address -->
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <!-- Phone number -->
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <!-- Service selection -->
+          <div class="form-group">
+            <label for="service">Service *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="manicure">Manicure (S$50)</option>
+              <option value="gel-nails">Gel Nails (S$80)</option>
+              <option value="nail-extension">Nail Extension (S$120)</option>
+              <option value="nail-art">Nail Art (S$100)</option>
+              <option value="nail-care">Nail Care (S$40)</option>
+            </select>
+          </div>
+
+          <!-- Date and time -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Preferred Date *</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="time">Preferred Time *</label>
+              <input type="time" id="time" name="time" min="10:00" max="20:00" required>
+            </div>
+          </div>
+
+          <!-- Submit button -->
+          <div class="form-submit">
+            <button class="button" type="submit">Submit Booking</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER: contact information, links and social media ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <!-- Footer: studio details -->
+      <section class="footer-column">
+        <div class="logo-bottom">
+        <img src="img/Esther’s Nail Studio Logo.png" alt="Esther's Nail Studio Logo">
+        <p class="address-bottom">520 Beauty Street,<br>Singapore, 203344</p>
+        </div>
+      </section>
+
+      <!-- Footer: contact information -->
+      <section class="footer-column">
+        <h2>Contact</h2>
+        <p><i class="fa-solid fa-phone"></i>Phone: <a href="tel:+6598765432">+65 9876 5432</a></p>
+        <p><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:esthersnailstudio@gmail.com">esthersnailstudio@gmail.com</a></p>
+        <p><i class="fa-solid fa-clock"></i>Mon - Fri: 10:00AM - 8:00PM</p>
+        <p><i class="fa-solid fa-clock"></i>Sat - Sun: 10:00AM - 6:00PM</p>
+      </section>
+
+      <!-- Footer: quick links -->
+      <nav class="footer-column" aria-label="Footer navigation">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-spa"></i>Services</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-images"></i>Gallery</a></li>
+          <li><a href="booking.html"><i class="fa-solid fa-calendar-check"></i>Booking</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Footer: social media links -->
+      <section class="footer-column">
+        <h2>Follow Us</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i>TikTok</a></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <p class="meta">&copy; 2026 Esther's Nail Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

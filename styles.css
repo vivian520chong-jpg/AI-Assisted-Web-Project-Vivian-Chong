@@ -1,0 +1,744 @@
+/* =========================================================
+   Esther's Nail Studio - styles.css
+   One shared stylesheet for all six pages.
+   Updated for: image logo, banner hero with button only,
+   Font Awesome icons, centred intro section.
+   ========================================================= */
+
+/* ---------- 1. Colour variables ---------- */
+:root {
+  /* Two accent colours */
+  --color-primary: #f4c6ce;   /* soft blush pink */
+  --color-secondary: #f6ecdf; /* warm cream / beige */
+
+  /* Supporting colours */
+  --color-background: #fffbf7; /* off-white page background */
+  --color-text: #4a3b36;       /* dark brown text */
+  --color-border: #e8d9cc;     /* soft border line */
+  --color-white: #ffffff;
+}
+
+/* ---------- 2. Base styles ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* ---------- 3. Typography (style guide) ---------- */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Meta text such as captions */
+.meta,
+figcaption {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+a {
+  color: var(--color-text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Font Awesome icons: small gap between icon and text */
+i.fa-solid,
+i.fa-brands {
+  width: 20px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+/* Visible keyboard focus */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+/* ---------- 4. Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.section-alt {
+  background-color: var(--color-secondary);
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-intro {
+  max-width: 620px;
+  margin: 0 auto 32px auto;
+  text-align: center;
+}
+
+/* ---------- 5. Buttons ---------- */
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color-white);
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.button-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-text);
+}
+
+.button-small {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.button-center {
+  text-align: center;
+  margin-top: 28px;
+}
+
+/* ---------- 6. Header and navigation ---------- */
+/* Both class names are styled so older pages still work */
+.logo-header,
+.site-header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* Full width: logo sits at the far left, menu at the far right */
+  max-width: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Logo image */
+.logo {
+  display: block;
+  text-decoration: none;
+}
+
+.logo img {
+  width: auto;
+  height: 64px;
+  object-fit: cover;
+}
+
+.logo-bottom {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin-left: -35px;
+}
+
+.address-bottom {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-list a:hover {
+  background-color: var(--color-secondary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* Highlights the page you are currently on */
+.nav-list a.active {
+  font-weight: bold;
+  border-bottom-color: var(--color-primary);
+}
+
+/* ---------- 7. Hero banners ---------- */
+/* The home banner image already contains the heading and tagline,
+   so the overlay only holds the button, placed near the bottom. */
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  background-color: var(--color-secondary);
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 24px 24px 7%;
+  background-color: transparent;
+}
+
+.hero-home-btn {
+  box-shadow: 0 2px 8px rgba(74, 59, 54, 0.25);
+}
+
+/* Big screens: the banner grows, so the button grows too */
+@media (min-width: 1300px) {
+  .hero-home-btn {
+    padding: 16px 44px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .hero-home-btn {
+    padding: 20px 56px;
+    font-size: 28px;
+  }
+}
+
+/* Smaller banner for the inner pages (About, Services, etc.) */
+.hero-small {
+  aspect-ratio: auto;
+  height: 260px;
+}
+
+.hero-small .hero-overlay {
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(255, 251, 247, 0.6);
+}
+
+.hero-tagline {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+/* ---------- 8. Intro / two-column content ---------- */
+.two-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.two-column-image {
+  width: 45%;
+}
+
+.two-column-image img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.two-column-text {
+  width: 55%;
+}
+
+/* Text on its own (no image beside it): centre it */
+.container > .two-column-text {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---------- 9. Cards ---------- */
+.card-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  width: calc(33.333% - 16px);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+/* Four "Why Choose Us" items */
+.feature {
+  width: calc(25% - 18px);
+  padding: 24px 16px;
+  text-align: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.feature-icon {
+  display: block;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  margin-bottom: 0;
+}
+
+/* ---------- 10. Mission and vision ---------- */
+.info-box {
+  width: calc(50% - 12px);
+  padding: 28px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.info-box p {
+  margin-bottom: 0;
+}
+
+/* ---------- 11. Technicians ---------- */
+.technician {
+  width: calc(33.333% - 16px);
+  padding: 28px 20px;
+  text-align: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.technician img {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 16px auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.technician p {
+  margin-bottom: 8px;
+}
+
+/* ---------- 12. Services list ---------- */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.service-card img {
+  width: 140px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-info {
+  width: 60%;
+}
+
+.service-info p {
+  margin-bottom: 0;
+}
+
+.service-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.service-action {
+  text-align: right;
+}
+
+/* ---------- 13. Gallery grid ---------- */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-item {
+  width: calc(33.333% - 16px);
+  margin: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gallery-item figcaption {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.gallery-item:hover img {
+  border: 3px solid var(--color-primary);
+}
+
+/* ---------- 14. Forms ---------- */
+.form-box {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  width: 50%;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+/* ---------- 15. Contact page ---------- */
+.contact-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.contact-info {
+  width: 40%;
+}
+
+.contact-form {
+  width: 60%;
+}
+
+.contact-item {
+  margin-bottom: 24px;
+}
+
+.contact-item p {
+  margin-bottom: 0;
+}
+
+.map-placeholder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  margin-top: 48px;
+  text-align: center;
+  background-color: var(--color-secondary);
+  border: 2px dashed var(--color-primary);
+  border-radius: 12px;
+}
+
+/* ---------- 16. Footer ---------- */
+.site-footer {
+  background-color: var(--color-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-column {
+  width: 30%;
+}
+
+/* Move the address and quick links columns a bit to the right */
+.footer-column:nth-child(1),
+.footer-column:nth-child(3) {
+  padding-left: 30px;
+}
+
+.footer-column h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.footer-column p,
+.footer-column li {
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  padding: 16px 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.copyright p {
+  margin-bottom: 0;
+}
+
+/* ---------- 17. Responsive: tablets ---------- */
+@media (max-width: 900px) {
+  .card,
+  .technician,
+  .gallery-item,
+  .feature {
+    width: calc(50% - 12px);
+  }
+
+  .nav-list a {
+    padding: 8px 10px;
+  }
+}
+
+/* ---------- 18. Responsive: mobile ---------- */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 56px;
+  }
+
+  /* Smaller button so it fits on the small banner */
+  .hero-overlay {
+    padding: 12px 12px 4%;
+  }
+
+  .hero-home-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .hero-small {
+    height: 220px;
+  }
+
+  .two-column,
+  .contact-layout,
+  .footer-inner,
+  .form-row {
+    flex-direction: column;
+  }
+
+  .two-column-image,
+  .two-column-text,
+  .contact-info,
+  .contact-form,
+  .footer-column,
+  .form-row .form-group {
+    width: 100%;
+  }
+
+  /* Remove the extra footer indent on mobile */
+  .footer-column:nth-child(1),
+  .footer-column:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .card,
+  .technician,
+  .gallery-item,
+  .feature,
+  .info-box {
+    width: 100%;
+  }
+
+  .service-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-card img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .service-info {
+    width: 100%;
+  }
+
+  .service-action {
+    text-align: center;
+  }
+
+  .form-box {
+    padding: 20px;
+  }
+}
